@@ -1,0 +1,18 @@
+version: '3.8'
+services:
+  latex:
+    build:
+      # イメージを作るためのDockerfileがある場所
+      context: . # Dockerfileのある場所
+      dockerfile: Dockerfile
+    container_name: latex-container
+    volumes:
+      - .:/workspace
+      - latex_node_modules:/workspace/lint/node_modules
+    working_dir: /workspace
+    # コンパイルが終了するとcontainerが終了してしまうのでコマンドは指定しない
+    # command: sh -c 'latexmk -C main.tex && latexmk main.tex && latexmk -c main.tex'
+    tty: true
+
+volumes:
+  latex_node_modules:

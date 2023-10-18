@@ -1,0 +1,145 @@
+{
+	"table": {
+		"prefix": "table",
+		"body": [
+			"\\begin{table}[tbp]",
+			"    % \\captionsetup{labelformat=empty,labelsep=none}",
+			"    \\centering",
+			"    \\normalsize",
+			"    \\begin{center}",
+			"        \\begin{tabular}{|ccc|}",
+			"            \\hline",
+			"            名称&文字&値\\\\\\",
+			"            \\hline \\hline",
+			"            \\hline",
+			"        \\end{tabular}",
+			"    \\end{center}",
+			"    \\caption{}",
+			"\\end{table}"
+		],
+		"description": "表挿入"
+	},
+	"bibtex": {
+		"prefix": "bibtex",
+		"body": [
+			"引用\\cite{inyou}はこのようにします．",
+			"",
+			"\\begin{thebibliography}{9}",
+			"  \\bibitem{inyou} これが引用サンプル",
+			"\\end{thebibliography}",
+		],
+		"description": "参考文献/引用"
+	},
+	"list": {
+		"prefix": "list",
+		"body": [
+			"\\begin{itemize}",
+			"    \\item a",
+			"\\end{itemize}"
+		],
+		"description": "list"
+	},
+	"list-num": {
+		"prefix": "list-num",
+		"body": [
+			"\\begin{enumerate}",
+			"  \\item 数字の箇条書き",
+			"\\end{enumerate}",
+		],
+		"description": "数字の箇条書き"
+	},
+	"input": {
+		"prefix": "input",
+		"body": [
+			"\\lstinputlisting[]{}"
+		],
+		"description": "ファイル挿入"
+	},
+	"figure": {
+		"prefix": "figure",
+		"body": [
+			"\\begin{figure}[]",
+			"    %\\captionsetup{labelformat=empty,labelsep=none}",
+			"    \\centering",
+			"    \\includegraphics[width=14cm]{}",
+			"    \\caption{}",
+			"    \\label{}",
+			"\\end{figure}"
+		],
+		"description": "図挿入"
+	},
+	"figure2": {
+		"prefix": "figure2",
+		"body": [
+			"\\begin{figure}[tbp]",
+			"    \\begin{flushleft}",
+			"        \\begin{tabular}{c}",
+			"            \\begin{minipage}{0.35\\paperwidth}",
+			"                \\begin{center}",
+			"                    \\includegraphics[width=0.35\\paperwidth]{}",
+			"                    \\caption{}",
+			"                    \\label{}",
+			"                \\end{center}",
+			"            \\end{minipage}",
+			"            \\begin{minipage}{0.35\\paperwidth}",
+			"                \\begin{center}",
+			"                    \\includegraphics[width = 0.35\\paperwidth]{}",
+			"                    \\caption{}",
+			"                    \\label{}",
+			"                \\end{center}",
+			"            \\end{minipage}",
+			"        \\end{tabular}",
+			"    \\end{flushleft}",
+			"\\end{figure}\\par"
+		],
+		"description": "横並びの図挿入"
+	},
+	"figure3": {
+		"prefix": "figure3",
+		"body": [
+			"\\begin{figure}[tbp]",
+			"    \\begin{flushleft}",
+			"        \\begin{tabular}{c}",
+			"            \\begin{minipage}{0.25\\paperwidth}",
+			"                \\begin{center}",
+			"                    \\includegraphics[width=0.25\\paperwidth]{}",
+			"                    \\caption{}",
+			"                    \\label{}",
+			"                \\end{center}",
+			"            \\end{minipage}",
+			"            \\begin{minipage}{0.25\\paperwidth}",
+			"                \\begin{center}",
+			"                    \\includegraphics[width=0.25\\paperwidth]{}",
+			"                    \\caption{}",
+			"                    \\label{}",
+			"                \\end{center}",
+			"            \\end{minipage}",
+			"            \\begin{minipage}{0.25\\paperwidth}",
+			"                \\begin{center}",
+			"                    \\includegraphics[width = 0.25\\paperwidth]{}",
+			"                    \\caption{}",
+			"                    \\label{}",
+			"                \\end{center}",
+			"            \\end{minipage}",
+			"        \\end{tabular}",
+			"    \\end{flushleft}",
+			"\\end{figure}\\par"
+		],
+		"description": "横並びの図(3つ)挿入"
+	},
+	"array": {
+		"prefix": "array",
+		"body": [
+			"\\begin{align}",
+			"    \\left\\{",
+			"    \\begin{array}{lll}\\vspace{.4zw}",
+			"    \\end{array}\\right.\\notag",
+			"\\end{align}"
+		],
+		"description": "array挿入"
+	},
+	"br_caption": {
+		"prefix": "br_caption",
+		"body": "\\protect\\linebreak $1"
+	}
+}

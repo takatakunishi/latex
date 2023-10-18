@@ -1,0 +1,17 @@
+{
+	"name": "latex-container",
+	"dockerComposeFile": "../docker-compose.yml",
+	"service": "latex",
+	"workspaceFolder": "/workspace",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"James-Yu.latex-workshop",
+				"donjayamanne.githistory",
+				"mhutchie.git-graph",
+				"eamodio.gitlens",
+				"taichi.vscode-textlint"
+			]
+		}
+	}
+}

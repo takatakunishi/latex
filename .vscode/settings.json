@@ -1,0 +1,83 @@
+{
+	// ---------- Language ----------
+	"[tex]": {
+		// スニペット補完中にも補完を使えるようにする
+		"editor.suggest.snippetsPreventQuickSuggestions": false,
+		// インデント幅を2にする
+		"editor.tabSize": 2,
+	},
+	"[latex]": {
+		// スニペット補完中にも補完を使えるようにする
+		"editor.suggest.snippetsPreventQuickSuggestions": false,
+		// インデント幅を2にする
+		"editor.tabSize": 2,
+	},
+	"[bibtex]": {
+		// インデント幅を2にする
+		"editor.tabSize": 2,
+		"editor.defaultFormatter": "James-Yu.latex-workshop",
+	},
+	// ---------- VS Codeの設定 ----------
+	// pane内で文字列が折り返すよう設定
+	"editor.wordWrap": "bounded",
+	// ---------- LaTeX Workshop ----------
+	"latex-workshop.intellisense.package.enabled": true,
+	// ビルドのレシピ
+	"latex-workshop.latex.recipes": [
+		{
+			"name": "latexmk",
+			"tools": [
+				"latexmk"
+			]
+		}
+	],
+	"latex-workshop.latex.tools": [
+		{
+			"name": "latexmk",
+			"command": "/usr/local/bin/texlive/latexmk", // which latexmkでlatexmkコマンドの場所を探し挿入する
+			"args": [
+				"-gg",
+				"-silent",
+				"-synctex=1",
+				"-interaction=nonstopmode",
+				"-outdir=%OUTDIR%",
+				"%DOC%"
+			]
+		}
+	],
+	// 生成ファイルを削除するときに対象とするファイル
+	// デフォルト値に "*.synctex.gz" を追加
+	"latex-workshop.latex.clean.fileTypes": [
+		"*.aux",
+		"*.bbl",
+		"*.blg",
+		"*.idx",
+		"*.ind",
+		"*.lof",
+		"*.lot",
+		"*.out",
+		"*.toc",
+		"*.acn",
+		"*.acr",
+		"*.alg",
+		"*.glg",
+		"*.glo",
+		"*.gls",
+		"*.ist",
+		"*.fls",
+		"*.log",
+		"*.fdb_latexmk",
+		"*.snm",
+		"*.nav",
+		"*.dvi",
+		"./**/*.synctex.gz"
+	],
+	// 保存時にtex -> pdfに自動再コンパイル
+	"latex-workshop.latex.autoBuild.run": "onSave",
+	"latex-workshop.latex.autoClean.run": "onBuilt",
+	// ---------- Textlintの設定 ----------
+	// textlintの実行ファイルを拡張機能が読み込めるよう指定
+	"textlint.nodePath": "lint/node_modules",
+	"textlint.targetPath": "*.tex",
+	"textlint.configPath": "/workspace/.textlintrc",
+}
